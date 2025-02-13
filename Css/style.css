@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
 }
 
 .clickable-text:hover {
@@ -138,8 +139,9 @@ header {
 
 .slide img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    max-width: 100%; /* Assicura che le immagini non superino mai la larghezza del loro contenitore */
+    height: auto;
 }
 
 .text-overlay {
@@ -267,6 +269,8 @@ header {
     max-width: 600px; /* Imposta una larghezza massima per l'immagine */
     height: auto; /* Mantiene le proporzioni dell'immagine */
     object-fit: cover;
+    max-width: 100%; /* Assicura che le immagini non superino mai la larghezza del loro contenitore */
+    height: auto;
     border-radius: 8px;
     margin-top: 30px; /* Aggiungi spazio tra l'immagine e il testo */
   }
@@ -310,6 +314,8 @@ header {
     height: auto; /* Mantiene le proporzioni dell'immagine */
     object-fit: cover;
     border-radius: 8px;
+    max-width: 100%; /* Assicura che le immagini non superino mai la larghezza del loro contenitore */
+    height: auto;
     margin-top: 30px; /* Aggiungi spazio tra l'immagine e il testo */
   }
   
@@ -317,8 +323,7 @@ header {
   .container {
     background-color: #111;
     width: 100%;
-    min-height: 100vh; /* Assicura che occupi almeno l'altezza del viewport */
-    overflow-y: hidden;
+    max-width: 100vw; /* Imposta un limite alla larghezza massima */
 }
 
 
