@@ -111,6 +111,32 @@ header {
     order: 1; /* Il testo sarà sempre sopra l'immagine */
   }
 }
+@media (max-width: 768px) {
+  #progetti .content,
+  #servizi .content,
+  #prodotti .product-item {
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi */
+  }
+
+  #progetti .image img,
+  #servizi .image img,
+  #prodotti .product-image img {
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    max-width: 300px; /* Imposta una larghezza massima */
+    height: auto; /* Mantiene le proporzioni */
+    margin-bottom: 15px; /* Aggiungi spazio tra l'immagine e il testo */
+  }
+
+  #progetti .text,
+  #servizi .text,
+  #prodotti .product-description {
+    text-align: center; /* Centra il testo */
+    max-width: 100%; /* Assicura che il testo non superi i bordi */
+  }
+}
+
+
 #Benvenuto {
     background-color: #111;
     color: #fff;
