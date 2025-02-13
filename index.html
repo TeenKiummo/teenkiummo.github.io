@@ -15,13 +15,36 @@
     <h1>TactiVaults</h1>
     <nav>
       <ul class="navbar">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
+  <section id="slideshow">
+    <div class="slide fade">
+      <img src="img1.jpg" alt="Image 1">
+      <div class="text-overlay">Text for Image 1</div>
+    </div>
+    <div class="slide fade">
+      <img src="img2.jpg" alt="Image 2">
+      <div class="text-overlay">Text for Image 2</div>
+    </div>
+    <div class="slide fade">
+      <img src="img3.jpg" alt="Image 3">
+      <div class="text-overlay">Text for Image 3</div>
+    </div>
+    <div class="slide fade">
+      <img src="img4.jpg" alt="Image 4">
+      <div class="text-overlay">Text for Image 4</div>
+    </div>
+    <!-- Controlli manuali -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </section>
+  <script src="javascript/javascript.js"></script>
 
   
 

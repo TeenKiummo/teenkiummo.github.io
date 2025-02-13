@@ -19,7 +19,6 @@ body {
     color: #575757;
 }
 
-
 .footer {
     color: white;
     text-align: center;
@@ -34,40 +33,102 @@ body {
     font-family: 'WorkSans', sans-serif;
 }
 
-  
-  header {
+header {
     background-color: #111;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  h1 {
+h1 {
     margin: 0;
     font-size: 24px;
-  }
+}
   
-  .navbar {
+.navbar {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 20px;
-  }
+}
   
-  .navbar li {
+.navbar li {
     display: inline;
-  }
+}
   
-  .navbar a {
+.navbar a {
     color: #fff;
     text-decoration: none;
     padding: 8px 16px;
     transition: background-color 0.3s;
-  }
+}
   
-  .navbar a:hover {
+.navbar a:hover {
     background-color: #333;
     border-radius: 4px;
+}
+
+#slideshow {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
   }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;            /* Tutte le immagini sono invisibili per default */
+    transition: opacity 1s ease-in-out;  /* Transizione di 1 secondo */
+  }
+  
+  .slide.active {
+    opacity: 1;            /* L'immagine attiva diventa visibile */
+    z-index: 1;
+  }
+  
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 36px;
+    padding: 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+  }
+  
   
