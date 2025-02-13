@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Aggiungi l'evento di apertura della modale per tutte le immagini
   const galleryImages = document.querySelectorAll(".gallery-item img");
-  galleryImages.forEach(img => {
-    img.addEventListener("click", function() {
-      openModal(img);
-    });
-  });
 
-  // Funzione per aprire la modale e visualizzare l'immagine
+  // Verifica se l'utente è su dispositivo mobile
+  const isMobile = window.innerWidth <= 768;
+
+  if (!isMobile) {
+    // Aggiungi evento di apertura della modale solo se non sei su mobile
+    galleryImages.forEach(img => {
+      img.addEventListener("click", function() {
+        openModal(img);
+      });
+    });
+  }
+
+  // Funzione per aprire la modale
   function openModal(imgElement) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("modalImage");
@@ -29,9 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Aggiungi un evento di clic sulla X per chiudere la modale
   const closeButton = document.querySelector(".modal .close");
   if (closeButton) {
-    closeButton.addEventListener("click", closeModal); // Chiude la modale quando si clicca sulla X
+    closeButton.addEventListener("click", closeModal);
   }
 });

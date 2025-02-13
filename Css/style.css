@@ -201,7 +201,6 @@ header {
   flex-direction: row; /* Layout standard desktop */
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
 }
 
 @media (max-width: 768px) {
@@ -213,6 +212,7 @@ header {
   #progetti .text {
     width: 100%;
     box-sizing: border-box;
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
     padding: 0 10px;
     text-align: center;
   }
@@ -236,7 +236,8 @@ header {
   #servizi .text {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 15px;
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
+    padding: 0 10px;
     text-align: center;
   }
 
@@ -351,11 +352,10 @@ header {
 #progetti {
     background-color: #111;
     color: white;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: left;
   }
   
-
   
   #progetti .text {
     flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
@@ -363,6 +363,7 @@ header {
   
   #progetti .text h2 {
     font-size: 32px;
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -406,6 +407,7 @@ header {
   
   #servizi .text h2 {
     font-size: 32px;
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -684,4 +686,29 @@ footer a:hover {
 html, body {
   overflow-x: hidden; /* Blocca lo scroll orizzontale */
   width: 100%;
+}
+@media (max-width: 768px) {
+  .product-item {
+    flex-direction: column; /* Disporre l'immagine sopra il testo */
+    align-items: center; /* Centrare il contenuto */
+    text-align: center;
+  }
+
+  .product-image img {
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    max-width: 300px; /* Limita la larghezza massima */
+    height: auto;
+  }
+
+  .product-description {
+    padding: 10px;
+  }
+
+  .product-description h3 {
+    font-size: 22px;
+  }
+
+  .product-description p {
+    font-size: 16px;
+  }
 }
