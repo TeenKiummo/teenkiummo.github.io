@@ -13,3 +13,9 @@ function showSlides() {
   slides[slideIndex - 1].classList.add("active"); // Aggiungi la classe active all'immagine corrente
   setTimeout(showSlides, 3000); // Cambia immagine ogni 3 secondi
 }
+
+function toggleMenu() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("show");
+  }
+  
