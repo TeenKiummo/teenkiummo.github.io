@@ -94,7 +94,23 @@ header {
       grid-template-columns: 1fr; /* Una sola colonna sui dispositivi mobili */
   }
 }
+@media (max-width: 768px) {
+  #progetti .content,
+  #servizi .content {
+    flex-direction: column; /* Dispone il contenuto in colonna */
+  }
 
+  #progetti .image,
+  #servizi .image {
+    order: 2; /* L'immagine sarà sempre dopo il testo */
+    margin-top: 20px;
+  }
+
+  #progetti .text,
+  #servizi .text {
+    order: 1; /* Il testo sarà sempre sopra l'immagine */
+  }
+}
 #Benvenuto {
     background-color: #111;
     color: #fff;
