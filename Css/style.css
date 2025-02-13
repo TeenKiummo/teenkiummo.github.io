@@ -191,15 +191,24 @@ header {
 
 
 .text-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 18px; /* Ridotto da 24px a 18px */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px; /* Ridotto per allinearsi meglio alla nuova dimensione del testo */
+  border-radius: 5px;
+  text-transform: uppercase; /* Mantiene lo stile del testo coerente */
 }
+
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 14px; /* Ancora più piccolo sui dispositivi mobili */
+    padding: 6px 12px;
+  }
+}
+
 
 
 .prev:hover, .next:hover {
