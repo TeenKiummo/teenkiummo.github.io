@@ -70,25 +70,57 @@ header {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        background-color: #111;
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Assicura che copra l'intera larghezza del viewport */
+    height: 100%; /* Assicura che copra l'intera altezza del viewport */
+    background-color: rgba(0, 0, 0, 1); /* Colore pieno senza trasparenza per evitare sovrapposizioni strane */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1000;
+  }
 
-    .navbar.show {
-        display: flex;
-    }
+  .navbar.show {
+    transform: translateX(0);
+  }
 
-    .menu-icon {
-        display: block;
-    }
+  .navbar a {
+    font-size: 32px; /* Testo ancora più grande per leggibilità */
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+  }
 }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr !important; /* Forza una sola colonna per riga */
+    gap: 10px;
+  }
+}
+
+
+
 
 @media (max-width: 768px) {
   #servizi .content {
