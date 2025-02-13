@@ -359,7 +359,6 @@ header {
   
   #progetti .text {
     flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
-    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
   }
   
   #progetti .text h2 {
@@ -403,7 +402,6 @@ header {
   
   #servizi .text {
     flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
-    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
   }
   
   #servizi .text h2 {
