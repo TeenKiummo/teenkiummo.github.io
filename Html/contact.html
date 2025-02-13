@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TactiVaults</title>
+  <link rel="stylesheet" href="../Css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container"> <!-- Contenitore principale con Flexbox -->
+    <header>
+        <h1>TactiVaults</h1>
+        <nav>
+          <div class="menu-icon" onclick="toggleMenu()">☰</div>
+          <ul class="navbar">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="about.html">Chi sono?</a></li>
+            <li><a href="products.html">Prodotti</a></li>
+            <li><a href="gallery.html">Galleria</a></li>
+            <li><a href="contact.html">Contattami</a></li>
+          </ul>
+        </nav>
+      </header>
+  <hr class="solid">
+  <section id="Benvenuto">
+    <div class="welcome-message">
+      <h2>BENVENUTO A BORDO!</h2>
+      <p>Si realizzano Patch per Airsoft, Coltelli Dummy, Espositori, e tanto altro ancora! .</p>
+    </div>
+    
+  </section>
+  
+  <section id="slideshow">
+    <div class="slide fade">
+      <img src="../images/img1.png" alt="Image 1">
+      <div class="text-overlay">Patch Personalizzate</div>
+    </div>
+    <div class="slide fade">
+      <img src="../images/img2.png" alt="Image 2">
+      <div class="text-overlay">Ricambi Per Repliche</div>
+    </div>
+    <div class="slide fade">
+      <img src="../images/img3.png" alt="Image 3">
+      <div class="text-overlay">Coltelli Dummy</div>
+    </div>
+    <div class="slide fade">
+      <img src="../images/img4.png" alt="Image 4">
+      <div class="text-overlay">Espositori e tanto altro!</div>
+    </div>
+    <!-- Controlli manuali -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </section>
+
+  <script src="../Javascript/javascript.js"></script>
+
+  <section id="progetti">
+    <div class="content">
+      <div class="text">
+        <h2>I Miei Progetti</h2>
+        <p>Oltre alla stampa 3D, mi occupo anche di progettazione avanzata per componenti personalizzati nell'ambito del Softair. Sviluppo soluzioni che rispondono alle necessità di ogni singolo cliente, creando pezzi unici, resistenti e funzionali. La progettazione viene fatta per garantire un'ottima resa sia estetica che pratica.</p>
+        <p>Se stai cercando qualcosa di esclusivo per il tuo equipaggiamento, dai un'occhiata ai miei lavori e scopri la qualità delle creazioni.</p>
+      </div>
+      <div class="image">
+        <img src="../images/progetto1.png" alt="Progetto esempio">
+      </div>
+    </div>
+  </section>  
+
+  <hr class="solid">
+
+  <section id="servizi">
+    <div class="content">
+      <div class="text">
+        <h2>I Miei Servizi</h2>
+        <p>Oltre alla stampa 3D, offro una vasta gamma di servizi personalizzati per gli appassionati del Softair. Realizzo patch personalizzate, ricambi per repliche, coltelli dummy e espositori, oltre a progettare soluzioni uniche per ogni esigenza. Se stai cercando qualcosa di particolare, posso creare progetti su misura per te.</p>
+        <p>La mia esperienza nell'ingegneria informatica mi permette di offrire un'ottima progettazione, con un perfetto equilibrio tra funzionalità e design, per ogni componente.</p>
+      </div>
+      <div class="image">
+        <img src="../images/progetto2.png" alt="Servizio esempio">
+      </div>
+    </div>
+  </section>
+
+  <hr class="solid">
+  
+  
+</div>
+
+<section id="chi-sono">
+  <div class="background-image"></div> <!-- Aggiunta dell'immagine di sfondo -->
+  <div class="content">
+    <h2>Chi Sono</h2>
+    <p>Ragazzo Palermitano appassionato da anni nel settore della stampa 3D, con una solida formazione come ingegnere informatico. Realizzo componenti personalizzati nell'ambito del Softair, offrendo non solo stampa 3D ma anche progettazione avanzata per soddisfare le esigenze più specifiche.</p>
+    <p>La mia passione per il Softair mi spinge a creare soluzioni uniche, come patch personalizzate, ricambi per repliche, coltelli dummy, espositori, e molto altro, tutti progettati per migliorare l'esperienza degli appassionati.</p>
+  </div>
+</section>
+
+
+<hr class="solid">
+
+<section id="contattami">
+  <div class="background-image"></div> <!-- Aggiunta dell'immagine di sfondo -->
+  <div class="content">
+    <h2>Contattami</h2>
+    <p>Se vuoi entrare in contatto con me per maggiori informazioni sui servizi o progetti personalizzati, non esitare a scrivermi!</p>
+    <p>Puoi scrivermi su WhatsApp direttamente cliccando sul pulsante qui sotto.</p>
+    <a href="https://wa.me/3421763047" target="_blank" class="whatsapp-button">Contattami su WhatsApp</a>
+  </div>
+</section>
+
+  <footer class="footer">
+      <div class="footer-content">
+          <p>&copy; 2025 TactiVaults. Tutti i diritti riservati.</p>
+          <p>Creato da Raoul Renda</p>
+      </div>
+  </footer>
+  
+  </body>
+  </html>
+  

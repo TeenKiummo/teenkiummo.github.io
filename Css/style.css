@@ -175,30 +175,47 @@ header {
 
 /* SEZIONE CHI SONO */
 #chi-sono {
-    background-color: #111;
+    position: relative;  /* Necessario per posizionare l'immagine di sfondo */
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-}
-
-#chi-sono h2 {
+  }
+  
+  #chi-sono .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/img1.png'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(30%);
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay scuro per dare contrasto */
+    z-index: -1; /* Posiziona l'immagine dietro il contenuto */
+  }
+  
+  #chi-sono h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-#chi-sono p {
+  }
+  
+  #chi-sono p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 15px;
-}
-
-.content {
+  }
+  
+  .content {
     max-width: 900px;
     margin: 0 auto;
-}
+    z-index: 1; /* Assicura che il contenuto rimanga sopra l'immagine */
+  }
+  
+
 
 /* SEZIONE PROGETTI */
 #progetti {
@@ -206,97 +223,96 @@ header {
     color: white;
     padding: 40px 20px;
     text-align: left;
-}
-
-#progetti .content {
+  }
+  
+  #progetti .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Immagine a sinistra e testo a destra */
     align-items: center;
-    justify-content: space-between;
-}
-
-#progetti .text {
-    flex: 1;
-    margin-right: 20px;
-}
-
-#progetti .text h2 {
+    justify-content: space-between; /* Spazio tra l'immagine e il testo */
+    gap: 80px;  /* Distanza tra il testo e l'immagine */
+  }
+  
+  #progetti .text {
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
+    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
+  }
+  
+  #progetti .text h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-#progetti .text p {
+  }
+  
+  #progetti .text p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
-}
-
-#progetti .image {
-    flex: 1;
+  }
+  
+  #progetti .image {
+    flex: 1 1 60%; /* L'immagine occupa il 40% dello spazio disponibile */
     display: flex;
-    justify-content: flex-end;
-}
-
-#progetti .image img {
-    width: 600px;
-    height: 500px;
+    justify-content: flex-start;  /* Allinea l'immagine a sinistra */
+  }
+  
+  #progetti .image img {
+    width: 100%; /* L'immagine occuperà il 100% della larghezza del suo contenitore */
+    max-width: 600px; /* Imposta una larghezza massima per l'immagine */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
     object-fit: cover;
     border-radius: 8px;
-}
-
-/* SEZIONE SERVIZI */
-#servizi {
-    background-color: #111;
-    color: white;
-    padding: 40px 20px;
-    text-align: left;
-}
-
+    margin-top: 30px; /* Aggiungi spazio tra l'immagine e il testo */
+  }
+  
+  /* SEZIONE PROGETTI */
 #servizi .content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Immagine a sinistra e testo a destra */
     align-items: center;
-    justify-content: space-between;
-    gap: 40px; /* Aggiungi spazio tra il testo e l'immagine */
-}
-
-#servizi .text {
-    flex: 1;
-    margin-left: 20px;
-}
-
-#servizi .text h2 {
+    justify-content: space-between; /* Spazio tra l'immagine e il testo */
+    gap: 40px;  /* Distanza tra testo e immagine (puoi regolarla) */
+  }
+  
+  #servizi .text {
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
+    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
+  }
+  
+  #servizi .text h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-#servizi .text p {
+  }
+  
+  #servizi .text p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
-}
+  }
+  
+  #servizi .image {
+    flex: 1 1 70%; /* L'immagine occupa il 40% dello spazio disponibile */
+    display: flex;
+    justify-content: flex-start; /* Allinea l'immagine a sinistra */
+  }
+  
+  #servizi .image img {
+    width: 100%; /* L'immagine occuperà il 100% della larghezza del suo contenitore */
+    max-width: 600px; /* L'immagine non supera i 600px di larghezza */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 30px; /* Aggiungi spazio tra l'immagine e il testo */
+  }
+  
 
 .container
 {
     background-color: #111;
     width: 100%;
-}
-
-#servizi .image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-}
-
-#servizi .image img {
-    width: 600px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 /* LINEE SEPARATORIE */
@@ -307,3 +323,61 @@ background-color: #fff;
     margin-right: auto;
 
 }
+
+/* CONTATTAMI */
+#contattami {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #contattami .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/img2.png'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(30%); /* Riduce la luminosità dell'immagine (puoi regolare la percentuale) */
+    z-index: -1; /* Mette l'immagine dietro il contenuto */
+  }
+  
+  #contattami h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #contattami p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .whatsapp-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #25D366; /* Colore verde WhatsApp */
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Colore scuro quando hover */
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1; /* Assicura che il contenuto resti sopra l'immagine */
+  }
+  
+  
