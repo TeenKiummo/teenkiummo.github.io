@@ -164,6 +164,65 @@ header {
   display: block;
 }
 
+#progetti .content {
+  display: flex;
+  flex-direction: row; /* Layout standard desktop */
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+@media (max-width: 768px) {
+  #progetti .content {
+    flex-direction: column !important; /* Forza il layout a colonna su mobile */
+    align-items: center;
+  }
+
+  #progetti .text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  #progetti .image {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+
+  #progetti .image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  #servizi .content {
+    flex-direction: column !important; /* Dispone il testo sopra l'immagine */
+    align-items: center;
+  }
+
+  #servizi .text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  #servizi .image {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+
+  #servizi .image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -268,13 +327,7 @@ header {
     text-align: left;
   }
   
-  #progetti .content {
-    display: flex;
-    flex-direction: row; /* Immagine a sinistra e testo a destra */
-    align-items: center;
-    justify-content: space-between; /* Spazio tra l'immagine e il testo */
-    gap: 80px;  /* Distanza tra il testo e l'immagine */
-  }
+
   
   #progetti .text {
     flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
