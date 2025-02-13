@@ -38,11 +38,10 @@ header {
 }
 
 .navbar {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 70px); /* Limita l'altezza massima al viewport */
 }
+
 
 .navbar li {
     display: inline;
@@ -89,6 +88,11 @@ header {
         display: block;
     }
 }
+@media (max-width: 768px) {
+  .gallery-grid {
+      grid-template-columns: 1fr; /* Una sola colonna sui dispositivi mobili */
+  }
+}
 
 #Benvenuto {
     background-color: #111;
@@ -112,11 +116,12 @@ header {
 }
 
 #slideshow {
-    position: relative;
-    max-width: 100%;
-    height: 550px;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: 50vh; /* Imposta un'altezza relativa alla viewport */
+  overflow: hidden;
 }
+
 
 .slide {
     position: absolute;
@@ -309,11 +314,13 @@ header {
   }
   
 
-.container
-{
+  .container {
     background-color: #111;
     width: 100%;
+    min-height: 100vh; /* Assicura che occupi almeno l'altezza del viewport */\
+    overflow-y: hidden;
 }
+
 
 /* LINEE SEPARATORIE */
 hr.solid {
