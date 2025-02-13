@@ -57,6 +57,9 @@ header {
     text-decoration: none;
     padding: 8px 16px;
     transition: background-color 0.3s;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #333;
   }
   
   .navbar a:hover {
@@ -77,10 +80,11 @@ header {
       display: none;
       flex-direction: column;
       background-color: #111;
-      position: absolute;
+      position: fixed; /* Copre tutto lo schermo in alto */
       top: 70px;
       left: 0;
       width: 100%;
+      z-index: 1000;
     }
   
     .navbar.show {
@@ -90,7 +94,9 @@ header {
     .menu-icon {
       display: block;
     }
+  
   }
+  
   
   
 h1 {
@@ -98,7 +104,6 @@ h1 {
     font-size: 24px;
 }
   
-
 
 #slideshow {
     position: relative;
