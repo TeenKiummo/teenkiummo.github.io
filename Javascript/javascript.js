@@ -1,28 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".menu-icon");
     const navbar = document.querySelector(".navbar");
-    let slideIndex = 0;
+    let slideIndex = 1;  // Imposta l'indice iniziale a 1
     let slideTimer;
   
     menuIcon.addEventListener("click", function () {
       navbar.classList.toggle("show");
     });
+    showSlide();
   
-    startSlideshow(); // Avvia lo slideshow
+    startSlideshow(); // Avvia lo slideshow inizialmente
   
-    // Avvia o riavvia lo slideshow
+    // Funzione per avviare lo slideshow
     function startSlideshow() {
-      showSlide(); // Mostra la slide corrente
-      slideTimer = setTimeout(startSlideshow, 3000); // Avvia il prossimo cambio immagine dopo 3 secondi
+      slideTimer = setTimeout(function () {
+        manualChangeSlide(1); // Cambia immagine automaticamente
+      }, 3000); // Avvia il prossimo cambio immagine dopo 3 secondi
     }
   
     // Funzione per mostrare la slide corrente
     function showSlide() {
       let slides = document.querySelectorAll(".slide");
       slides.forEach(slide => slide.classList.remove("active")); // Rimuove la classe active da tutte le immagini
-      slideIndex++;
       if (slideIndex > slides.length) {
-        slideIndex = 1;
+        slideIndex = 0;
       }
       slides[slideIndex - 1].classList.add("active"); // Aggiunge la classe active all'immagine corrente
     }
@@ -32,9 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
       clearTimeout(slideTimer); // Ferma il timer corrente
       let slides = document.querySelectorAll(".slide");
       slides.forEach(slide => slide.classList.remove("active"));
+      
       slideIndex += n;
+  
+      // Gestisci il ciclo delle immagini
       if (slideIndex > slides.length) slideIndex = 1;
-      if (slideIndex < 1) slideIndex = slides.length;
+      if (slideIndex < 1) slideIndex = slides.length; // Gestisce il caso in cui slideIndex scende sotto 1
+  
       slides[slideIndex - 1].classList.add("active");
       startSlideshow(); // Riavvia il timer
     }
