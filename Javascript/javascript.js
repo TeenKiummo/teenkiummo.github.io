@@ -47,5 +47,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Associa le frecce ai controlli manuali
     document.querySelector(".prev").addEventListener("click", () => manualChangeSlide(-1));
     document.querySelector(".next").addEventListener("click", () => manualChangeSlide(1));
+
+    // Funzione per aprire la modale e visualizzare l'immagine
+function openModal(imgElement) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  var captionText = document.getElementById("caption");
+
+  modal.style.display = "flex"; // Mostra la modale
+  modalImg.src = imgElement.src; // Imposta l'immagine nella modale
+  captionText.innerHTML = imgElement.alt; // Imposta la didascalia (opzionale)
+}
+
+// Funzione per chiudere la modale
+function closeModal() {
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none"; // Nasconde la modale
+}
+
   });
   
