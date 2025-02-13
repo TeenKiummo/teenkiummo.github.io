@@ -89,52 +89,31 @@ header {
         display: block;
     }
 }
+
 @media (max-width: 768px) {
-  .gallery-grid {
-      grid-template-columns: 1fr; /* Una sola colonna sui dispositivi mobili */
-  }
-}
-@media (max-width: 768px) {
-  #progetti .content,
   #servizi .content {
-    flex-direction: column; /* Dispone il contenuto in colonna */
-  }
-
-  #progetti .image,
-  #servizi .image {
-    order: 2; /* L'immagine sarà sempre dopo il testo */
-    margin-top: 20px;
-  }
-
-  #progetti .text,
-  #servizi .text {
-    order: 1; /* Il testo sarà sempre sopra l'immagine */
-  }
-}
-@media (max-width: 768px) {
-  #progetti .content,
-  #servizi .content,
-  #prodotti .product-item {
-    flex-direction: column; /* Dispone gli elementi in colonna */
+    flex-direction: column; /* Dispone il testo sopra l'immagine */
     align-items: center; /* Centra gli elementi */
   }
 
-  #progetti .image img,
-  #servizi .image img,
-  #prodotti .product-image img {
-    width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
-    max-width: 300px; /* Imposta una larghezza massima */
-    height: auto; /* Mantiene le proporzioni */
-    margin-bottom: 15px; /* Aggiungi spazio tra l'immagine e il testo */
+  #servizi .text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    text-align: center; /* Centra il testo */
   }
 
-  #progetti .text,
-  #servizi .text,
-  #prodotti .product-description {
-    text-align: center; /* Centra il testo */
-    max-width: 100%; /* Assicura che il testo non superi i bordi */
+  #servizi .image {
+    width: 100%;
+    max-width: 300px; /* Imposta una larghezza massima per l'immagine */
+  }
+
+  #servizi .image img {
+    width: 100%;
+    height: auto;
   }
 }
+
 
 
 #Benvenuto {
@@ -161,30 +140,55 @@ header {
 #slideshow {
   position: relative;
   max-width: 100%;
-  height: 50vh; /* Imposta un'altezza relativa alla viewport */
+  height: auto; /* Usa altezza dinamica */
   overflow: hidden;
 }
 
-
 .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
-    opacity: 1;
-    z-index: 1;
+  opacity: 1;
+  z-index: 1;
+  position: relative;
 }
 
 .slide img {
-    width: 100%;
-    object-fit: cover;
-    max-width: 100%; /* Assicura che le immagini non superino mai la larghezza del loro contenitore */
-    height: auto;
+  width: 100%;
+  height: auto; /* Mantiene le proporzioni naturali */
+  display: block;
 }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
 
 .text-overlay {
     position: absolute;
@@ -197,25 +201,6 @@ header {
     border-radius: 5px;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 36px;
-    color: #fff;
-    padding: 16px;
-    cursor: pointer;
-    user-select: none;
-    z-index: 1000;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
