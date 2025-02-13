@@ -97,7 +97,7 @@ header {
   }
   
   #Benvenuto {
-    background-color: #000000;
+    background-color: #111;;
     color: #fff;
     padding: 50px 20px;
 
@@ -188,5 +188,128 @@ h1 {
     border-radius: 50%;
   }
   
+  #chi-sono {
+    background-color: #111; /* Colore scuro per mantenere la coerenza con il design */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
   
+  #chi-sono h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #chi-sono p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  #progetti {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+  }
+  
+  #progetti .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #progetti .text {
+    flex: 1;
+    margin-right: 20px;  /* Distanza tra il testo e l'immagine */
+  }
+  
+  #progetti .text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #progetti .text p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  #progetti .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;  /* Allinea l'immagine a destra */
+  }
+  
+  #progetti .image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .container {
+    background-color: #111;
+}
+  #servizi {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+  }
+  
+  #servizi .content {
+    display: flex;
+    flex-direction: row-reverse;  /* Cambiato da row a row-reverse per mettere l'immagine a destra */
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #servizi .text {
+    flex: 1;
+    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
+  }
+  
+  hr.solid {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+  
+  
+  
+  #servizi .text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #servizi .text p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  #servizi .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;  /* Allinea l'immagine a sinistra */
+  }
+  
+  #servizi .image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   
