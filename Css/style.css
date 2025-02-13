@@ -6,13 +6,11 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #000;
     color: white;
-    margin: 10px;
-    padding: 10px;
     margin: 0;
+    padding: 0;
     font-family: 'Orbitron', sans-serif;
-    background-color: #000; /* Futuristico e minimale */
 }
 
 .clickable-text:hover {
@@ -23,9 +21,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    margin: 0;                
-    position: static;         
-    bottom: 0;                
+    margin: 0;
 }
 
 .footer-content p {
@@ -39,90 +35,80 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 20px;
-  }
-  
-  .navbar li {
+}
+
+.navbar li {
     display: inline;
-  }
-  
-  .navbar a {
+}
+
+.navbar a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 16px;
-    transition: background-color 0.3s;
     padding: 16px;
     text-align: center;
     border-bottom: 1px solid #333;
-  }
-  
-  .navbar a:hover {
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
     background-color: #333;
     border-radius: 4px;
-  }
-  
-  .menu-icon {
+}
+
+.menu-icon {
     display: none;
     font-size: 32px;
     color: #fff;
     cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .navbar {
-      display: none;
-      flex-direction: column;
-      background-color: #111;
-      position: fixed; /* Copre tutto lo schermo in alto */
-      top: 70px;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
-  
+
     .navbar.show {
-      display: flex;
+        display: flex;
     }
-  
+
     .menu-icon {
-      display: block;
+        display: block;
     }
-  
-  }
-  
-  #Benvenuto {
-    background-color: #111;;
+}
+
+#Benvenuto {
+    background-color: #111;
     color: #fff;
     padding: 50px 20px;
-
-  }
-  .welcome-message{
     text-align: center;
-  }
-  .welcome-message h2 {
+}
+
+.welcome-message h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  
-  .welcome-message p {
+}
+
+.welcome-message p {
     font-size: 18px;
     line-height: 1.5;
     margin: 0;
     font-weight: 400;
-  }
-  
-  
-h1 {
-    margin: 0;
-    font-size: 24px;
 }
 
 #slideshow {
@@ -130,29 +116,28 @@ h1 {
     max-width: 100%;
     height: 550px;
     overflow: hidden;
-  }
-  
-  .slide {
+}
+
+.slide {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .slide.active {
+}
+
+.slide.active {
     opacity: 1;
     z-index: 1;
-  }
-  
-  
-  .slide img {
+}
+
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .text-overlay {
+}
+
+.text-overlay {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -161,9 +146,9 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
-  }
-  
-  .prev, .next {
+}
+
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -173,143 +158,152 @@ h1 {
     cursor: pointer;
     user-select: none;
     z-index: 1000;
-  }
-  
-  .prev {
+}
+
+.prev {
     left: 10px;
-  }
-  
-  .next {
+}
+
+.next {
     right: 10px;
-  }
-  
-  .prev:hover, .next:hover {
+}
+
+.prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
-  }
-  
-  #chi-sono {
-    background-color: #111; /* Colore scuro per mantenere la coerenza con il design */
+}
+
+/* SEZIONE CHI SONO */
+#chi-sono {
+    background-color: #111;
     color: white;
     padding: 40px 20px;
     text-align: center;
-  }
-  
-  #chi-sono h2 {
+}
+
+#chi-sono h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  
-  #chi-sono p {
+}
+
+#chi-sono p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 15px;
-  }
-  
-  .content {
+}
+
+.content {
     max-width: 900px;
     margin: 0 auto;
-  }
-  
-  #progetti {
+}
+
+/* SEZIONE PROGETTI */
+#progetti {
     background-color: #111;
     color: white;
     padding: 40px 20px;
     text-align: left;
-  }
-  
-  #progetti .content {
+}
+
+#progetti .content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  #progetti .text {
+}
+
+#progetti .text {
     flex: 1;
-    margin-right: 20px;  /* Distanza tra il testo e l'immagine */
-  }
-  
-  #progetti .text h2 {
+    margin-right: 20px;
+}
+
+#progetti .text h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  
-  #progetti .text p {
+}
+
+#progetti .text p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
-  }
-  
-  #progetti .image {
+}
+
+#progetti .image {
     flex: 1;
     display: flex;
-    justify-content: flex-end;  /* Allinea l'immagine a destra */
-  }
-  
-  #progetti .image img {
-    width: 250px;
-    height: 250px;
+    justify-content: flex-end;
+}
+
+#progetti .image img {
+    width: 600px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  .container {
-    background-color: #111;
 }
-  #servizi {
+
+/* SEZIONE SERVIZI */
+#servizi {
     background-color: #111;
     color: white;
     padding: 40px 20px;
     text-align: left;
-  }
-  
-  #servizi .content {
+}
+
+#servizi .content {
     display: flex;
-    flex-direction: row-reverse;  /* Cambiato da row a row-reverse per mettere l'immagine a destra */
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  #servizi .text {
+    gap: 40px; /* Aggiungi spazio tra il testo e l'immagine */
+}
+
+#servizi .text {
     flex: 1;
-    margin-left: 20px;  /* Distanza tra il testo e l'immagine */
-  }
-  
-  hr.solid {
-    background-color: #ffffff;
-    padding: 1px;
-  }
-  
-  
-  
-  #servizi .text h2 {
+    margin-left: 20px;
+}
+
+#servizi .text h2 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  
-  #servizi .text p {
+}
+
+#servizi .text p {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
-  }
-  
-  #servizi .image {
+}
+
+.container
+{
+    background-color: #111;
+    width: 100%;
+}
+
+#servizi .image {
     flex: 1;
     display: flex;
-    justify-content: flex-start;  /* Allinea l'immagine a sinistra */
-  }
-  
-  #servizi .image img {
-    width: 250px;
-    height: 250px;
+    justify-content: flex-start;
+}
+
+#servizi .image img {
+    width: 600px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
+}
+
+/* LINEE SEPARATORIE */
+hr.solid {
+background-color: #fff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
