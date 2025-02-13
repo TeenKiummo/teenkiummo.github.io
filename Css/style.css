@@ -213,14 +213,13 @@ header {
   #progetti .text {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 10px;
     text-align: center;
   }
 
   #progetti .image {
     width: 100%;
     max-width: 500px;
-    margin-top: 20px;
   }
 
   #progetti .image img {
@@ -244,7 +243,6 @@ header {
   #servizi .image {
     width: 100%;
     max-width: 500px;
-    margin-top: 20px;
   }
 
   #servizi .image img {
@@ -280,17 +278,15 @@ header {
   border-radius: 50%;
 }
 
-
 .text-overlay {
   position: absolute;
-  bottom: 20px;
+  top: 5px; /* Cambia da bottom a top per allineare meglio la scritta */
   left: 20px;
   color: #fff;
-  font-size: 18px; /* Ridotto da 24px a 18px */
+  font-size: 24px;
   background: rgba(0, 0, 0, 0.5);
-  padding: 8px 16px; /* Ridotto per allinearsi meglio alla nuova dimensione del testo */
+  padding: 10px 20px;
   border-radius: 5px;
-  text-transform: uppercase; /* Mantiene lo stile del testo coerente */
 }
 
 @media (max-width: 768px) {
@@ -367,7 +363,7 @@ header {
   }
   
   #progetti .text h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -411,7 +407,7 @@ header {
   }
   
   #servizi .text h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
