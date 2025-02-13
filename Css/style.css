@@ -487,6 +487,17 @@ background-color: #fff;
   margin-right: 20px; /* Aggiungi spazio tra l'immagine e la descrizione */
 }
 
+footer a {
+  font-style: italic; /* Imposta il testo in corsivo */
+  color: #5d9eff; /* Imposta un colore scuro per il link (modifica il colore come preferisci) */
+  text-decoration: none; /* Rimuove la sottolineatura predefinita */
+}
+
+footer a:hover {
+  color: #3d2fff; /* Colore del link quando ci si passa sopra (hover effect) */
+}
+
+
 .product-description {
   flex: 1;
   text-align: left; /* Allinea il testo a sinistra */
@@ -517,4 +528,29 @@ background-color: #fff;
 
 .whatsapp-button:hover {
   background-color: #128C7E; /* Colore scuro quando hover */
+}
+
+/* Centra il pulsante */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra il pulsante orizzontalmente */
+  margin-top: 15px; /* Aggiungi uno spazio tra il testo e il pulsante */
+  margin-bottom: 15px;
+}
+
+.show-products-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50; /* Colore verde */
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.show-products-button:hover {
+  background-color: #45a049; /* Colore più scuro quando hover */
 }
