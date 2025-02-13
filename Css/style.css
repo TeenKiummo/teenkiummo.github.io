@@ -136,12 +136,12 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;            /* Tutte le immagini sono invisibili per default */
-    transition: opacity 1s ease-in-out;  /* Transizione di 1 secondo */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
   
   .slide.active {
-    opacity: 1;            /* L'immagine attiva diventa visibile */
+    opacity: 1;
     z-index: 1;
   }
   
@@ -167,11 +167,12 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #fff;
     font-size: 36px;
+    color: #fff;
     padding: 16px;
     cursor: pointer;
     user-select: none;
+    z-index: 1000;
   }
   
   .prev {
@@ -186,5 +187,6 @@ h1 {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
   }
+  
   
   
