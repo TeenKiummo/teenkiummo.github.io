@@ -460,3 +460,61 @@ background-color: #fff;
   color: #f00; /* Cambia colore quando ci passi sopra */
 }
 
+/* CSS per i prodotti */
+#prodotti {
+  padding: 40px 20px;
+  text-align: center; /* Centra il testo all'interno della sezione */
+  display: flex;
+  flex-direction: column; /* Disporre gli elementi uno sotto l'altro */
+  align-items: center; /* Centra orizzontalmente tutti gli elementi */
+}
+
+.product-item {
+  display: flex;
+  flex-direction: row; /* Immagine a sinistra e descrizione a destra */
+  align-items: center; /* Allinea l'immagine e il testo al centro verticalmente */
+  justify-content: center; /* Centra orizzontalmente l'immagine e la descrizione */
+  margin-bottom: 40px; /* Distanza tra i prodotti */
+  width: 100%; /* Assicura che i prodotti prendano tutta la larghezza */
+  max-width: 1200px; /* Limita la larghezza massima dei prodotti */
+}
+
+.product-image img {
+  width: 200px; /* Modifica la larghezza per renderle più compatte */
+  height: 200px; /* Modifica l'altezza per renderle quadrate */
+  object-fit: cover; /* Mantieni le proporzioni dell'immagine e ritagliala se necessario */
+  border-radius: 8px; /* Aggiungi bordi arrotondati */
+  margin-right: 20px; /* Aggiungi spazio tra l'immagine e la descrizione */
+}
+
+.product-description {
+  flex: 1;
+  text-align: left; /* Allinea il testo a sinistra */
+}
+
+.product-description h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #25D366; /* Colore verde WhatsApp */
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Colore scuro quando hover */
+}
