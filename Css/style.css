@@ -582,3 +582,7 @@ footer a:hover {
 .show-products-button:hover {
   background-color: #45a049; /* Colore più scuro quando hover */
 }
+html, body {
+  overflow-x: hidden; /* Blocca lo scroll orizzontale */
+  width: 100%;
+}
