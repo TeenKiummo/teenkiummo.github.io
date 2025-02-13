@@ -38,7 +38,7 @@ header {
 }
 
 .navbar {
-  overflow-y: auto;
+  overflow-y: hidden;
   max-height: calc(100vh - 70px); /* Limita l'altezza massima al viewport */
 }
 
@@ -317,7 +317,7 @@ header {
   .container {
     background-color: #111;
     width: 100%;
-    min-height: 100vh; /* Assicura che occupi almeno l'altezza del viewport */\
+    min-height: 100vh; /* Assicura che occupi almeno l'altezza del viewport */
     overflow-y: hidden;
 }
 
