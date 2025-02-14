@@ -60,6 +60,7 @@ header {
 .navbar a:hover {
     background-color: #333;
     border-radius: 4px;
+    text-decoration: none;
 }
 
 .menu-icon {
@@ -71,46 +72,69 @@ header {
 
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Assicura che copra l'intera larghezza del viewport */
-    height: 100%; /* Assicura che copra l'intera altezza del viewport */
-    background-color: rgba(0, 0, 0, 1); /* Colore pieno senza trasparenza per evitare sovrapposizioni strane */
+    position: fixed; /* Cambiato da absolute a fixed */
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100dvh; /* Copre tutta l'altezza visibile */
+    background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
-    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
   }
+  
+  .navbar a {
+    font-size: 32px;
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid transparent;
+    width: auto; /* Cambia da 100% a auto per evitare che prenda tutta la larghezza */
+    display: inline-block; /* Mantieni solo la larghezza del testo */
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
 
   .navbar.show {
-    transform: translateX(0);
-  }
-
-  .navbar a {
-    font-size: 32px; /* Testo ancora più grande per leggibilità */
-    padding: 25px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    display: block;
-    width: 100%;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   .menu-icon {
     display: block;
-    font-size: 36px;
+    font-size: 32px;
     color: white;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
+    position: absolute; /* Cambia da fixed a absolute */
+    top: 10px;
     right: 20px;
     z-index: 1100;
   }
+
+  .navbar li {
+    margin-bottom: 20px;
+  }
+
+  .navbar a:hover {
+    background-color: #333;
+    border-bottom: 2px solid white;
+    border-radius: 8px;
+  }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   .gallery-grid {
@@ -121,23 +145,23 @@ header {
 
 
 
-
 @media (max-width: 768px) {
   #servizi .content {
-    flex-direction: column; /* Dispone il testo sopra l'immagine */
-    align-items: center; /* Centra gli elementi */
+    flex-direction: column !important; /* Dispone il testo sopra l'immagine */
+    align-items: center;
   }
 
   #servizi .text {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 15px;
-    text-align: center; /* Centra il testo */
+    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
+    padding: 0 10px;
+    text-align: center;
   }
 
   #servizi .image {
     width: 100%;
-    max-width: 400px; /* Imposta una larghezza massima per l'immagine */
+    max-width: 250px; /* SECONDA */
   }
 
   #servizi .image img {
@@ -148,11 +172,13 @@ header {
 
 
 
+
 #Benvenuto {
     background-color: #111;
     color: #fff;
-    padding: 50px 20px;
+    padding: 10px 20px;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .welcome-message h2 {
@@ -219,7 +245,7 @@ header {
 
   #progetti .image {
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;  /* IMG SUPERIORE */
   }
 
   #progetti .image img {
@@ -227,30 +253,7 @@ header {
     height: auto;
   }
 }
-@media (max-width: 768px) {
-  #servizi .content {
-    flex-direction: column !important; /* Dispone il testo sopra l'immagine */
-    align-items: center;
-  }
 
-  #servizi .text {
-    width: 100%;
-    box-sizing: border-box;
-    flex: 1 1 60%; /* Il testo occupa il 60% dello spazio disponibile */
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  #servizi .image {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  #servizi .image img {
-    width: 100%;
-    height: auto;
-  }
-}
 
 
 
@@ -354,6 +357,7 @@ header {
     color: white;
     padding: 20px 20px;
     text-align: left;
+    gap: 15px;  /* Distanza tra testo e immagine (puoi regolarla) */
   }
   
   
@@ -394,11 +398,12 @@ header {
   
   /* SEZIONE PROGETTI */
 #servizi .content {
+  padding: 20px 20px;
     display: flex;
     flex-direction: row-reverse; /* Immagine a sinistra e testo a destra */
     align-items: center;
     justify-content: space-between; /* Spazio tra l'immagine e il testo */
-    gap: 40px;  /* Distanza tra testo e immagine (puoi regolarla) */
+    gap: 15px;  /* Distanza tra testo e immagine (puoi regolarla) */
   }
   
   #servizi .text {
@@ -533,7 +538,8 @@ background-color: #fff;
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colonne per riga */
-  gap: 5px; /* Spazio tra le immagini */
+  gap: 20px; /* Spazio tra le immagini */
+  
   justify-items: center; /* Allinea le immagini al centro della griglia */
 }
 
