@@ -31,11 +31,28 @@ body {
 }
 
 header {
-    background-color: #111;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #111;
+  padding: 20px;
+
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Allinea verticalmente gli elementi */
+}
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 900;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0; /* Rimuovi il margine predefinito */
+  line-height: 1; /* Assicura che l'altezza della riga sia uniforme */
 }
 
 .navbar {
@@ -61,15 +78,6 @@ header {
     background-color: #333;
     border-radius: 4px;
     text-decoration: none;
-}
-
-.menu-icon {
-  margin-top: 25px;
-    display: none;
-    font-size: 32px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 900;
 }
 
 @media (max-width: 768px) {
@@ -107,6 +115,9 @@ header {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
   }
 
   .menu-icon {
@@ -114,10 +125,9 @@ header {
     font-size: 32px;
     color: white;
     cursor: pointer;
-    position: absolute; /* Cambia da fixed a absolute */
-    top: 10px;
-    right: 20px;
+    position: relative;
     z-index: 1200;
+
   }
 
   .navbar li {
@@ -200,28 +210,29 @@ header {
 #slideshow {
   position: relative;
   max-width: 100%;
-  height: 800px; /* Usa altezza dinamica */
+  height: 700px;
   overflow: hidden;
+  display: flex;
+  align-items: center; /* Allinea tutte le immagini e le frecce verticalmente */
 }
 
 .slide {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
-  z-index: 1;
-  position: relative;
+  z-index: 2;
 }
 
 .slide img {
   width: 100%;
-  height: auto; /* Mantiene le proporzioni naturali */
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 #progetti .content {
@@ -233,8 +244,16 @@ header {
 
 @media (max-width: 768px) {
   #slideshow{
-    height: auto; /* Usa altezza dinamica */
+    height: 300px; /* Riduci l'altezza su dispositivi mobili */
+    align-items: flex-start; /* Rimuove il centraggio verticale */
   }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   #progetti .content {
     flex-direction: column !important; /* Forza il layout a colonna su mobile */
     align-items: center;
@@ -259,19 +278,16 @@ header {
   }
 }
 
-
-
-
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 36px;
   color: #fff;
-  padding: 10px;
+  padding: 16px;
   cursor: pointer;
   user-select: none;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .prev {
@@ -329,7 +345,7 @@ header {
     background-image: url('../images/img1.png'); /* Sostituisci con il percorso della tua immagine */
     background-size: cover;
     background-position: center;
-    filter: blur(8px) brightness(30%);
+    filter: blur(8px) brightness(25%);
     background-color: rgba(0, 0, 0, 0.5); /* Overlay scuro per dare contrasto */
     z-index: -1; /* Posiziona l'immagine dietro il contenuto */
   }
@@ -479,7 +495,7 @@ background-color: #fff;
     background-image: url('../images/img2.png'); /* Sostituisci con il percorso della tua immagine */
     background-size: cover;
     background-position: center;
-    filter: blur(8px) brightness(30%); /* Riduce la luminosità dell'immagine (puoi regolare la percentuale) */
+    filter: blur(8px) brightness(25%); /* Riduce la luminosità dell'immagine (puoi regolare la percentuale) */
     z-index: -1; /* Mette l'immagine dietro il contenuto */
   }
   
@@ -490,6 +506,31 @@ background-color: #fff;
     text-transform: uppercase;
   }
   
+  .banner {
+    background-color: #002b0b; /* Colore rosso acceso */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Per mantenerlo sopra tutto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .banner p {
+    margin: 0;
+    animation: blink 1.5s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
+  
+
   #contattami p {
     font-size: 18px;
     line-height: 1.5;
@@ -563,6 +604,14 @@ background-color: #fff;
   transform: scale(1.05); /* Aggiungi effetto hover per ingrandire l'immagine */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più forte quando hover */
 }
+
+.privacy-policy {
+  font-style: italic;
+  color: #bbb; /* Colore chiaro per maggiore leggibilità */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
 
 /* Modal (Lightbox) */
 .modal {
