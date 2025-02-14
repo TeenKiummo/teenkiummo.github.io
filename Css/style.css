@@ -833,3 +833,8 @@ html, body {
 .cookie-banner a:hover {
   color: #3d2fff; /* Colore del link quando ci si passa sopra (hover effect) */
 }
+@media (max-width: 768px) {
+  .cookie-banner p {
+    font-size: 13px; /* Riduce ulteriormente il testo per i telefoni */
+  }
+}
