@@ -370,8 +370,16 @@ h1 {
     z-index: 1; /* Assicura che il contenuto rimanga sopra l'immagine */
   }
   
-
-
+  .privacy-policy-page {
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1; /* Assicura che il contenuto rimanga sopra l'immagine */
+  }
+  #privacy {
+    position: relative;
+    padding: 60px 20px;
+    text-align: left;
+  }
 /* SEZIONE PROGETTI */
 #progetti {
     background-color: #111;
@@ -485,7 +493,7 @@ background-color: #fff;
     padding: 60px 20px;
     text-align: center;
   }
-  
+
   #contattami .background-image {
     position: absolute;
     top: 0;
