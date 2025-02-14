@@ -7,12 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
   menuIcon.addEventListener("click", function (event) {
     event.stopPropagation(); // Evita che il clic sull'icona chiuda immediatamente il menu
     navbar.classList.toggle("show");
+
+    // Cambia l'icona tra ☰ e ✖
+    if (menuIcon.textContent === "☰") {
+      menuIcon.textContent = "✖";
+    } else {
+      menuIcon.textContent = "☰";
+    }
   });
 
   // Chiude la navbar se clicchi fuori
   document.addEventListener("click", function (event) {
     if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
       navbar.classList.remove("show");
+      menuIcon.textContent = "☰"; // Reset dell'icona a ☰
     }
   });
 

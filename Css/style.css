@@ -64,17 +64,19 @@ header {
 }
 
 .menu-icon {
+  margin-top: 25px;
     display: none;
     font-size: 32px;
     color: #fff;
     cursor: pointer;
+    z-index: 900;
 }
 
 @media (max-width: 768px) {
   .navbar {
     position: fixed; /* Cambiato da absolute a fixed */
     top: -15px;
-    left: -15px;
+    left: -40px;
     width: 100%;
     height: 100dvh; /* Copre tutta l'altezza visibile */
     background-color: rgba(0, 0, 0, 0.95);
@@ -115,7 +117,7 @@ header {
     position: absolute; /* Cambia da fixed a absolute */
     top: 10px;
     right: 20px;
-    z-index: 1100;
+    z-index: 1200;
   }
 
   .navbar li {
@@ -198,7 +200,7 @@ header {
 #slideshow {
   position: relative;
   max-width: 100%;
-  height: auto; /* Usa altezza dinamica */
+  height: 800px; /* Usa altezza dinamica */
   overflow: hidden;
 }
 
@@ -230,6 +232,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  #slideshow{
+    height: auto; /* Usa altezza dinamica */
+  }
   #progetti .content {
     flex-direction: column !important; /* Forza il layout a colonna su mobile */
     align-items: center;
@@ -670,7 +675,7 @@ footer a:hover {
   display: flex;
   justify-content: center; /* Centra il pulsante orizzontalmente */
   margin-top: 15px; /* Aggiungi uno spazio tra il testo e il pulsante */
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .show-products-button {
