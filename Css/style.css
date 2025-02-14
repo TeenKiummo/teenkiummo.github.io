@@ -796,21 +796,31 @@ html, body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
-  text-align: center;  /* Allinea il testo al centro */
+  text-align: center;
   padding: 20px;
   z-index: 9999;
   display: none;
+  box-sizing: border-box;
+}
+
+.cookie-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Spazio tra testo e pulsanti */
 }
 
 .cookie-banner p {
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 14px;
   max-width: 800px; /* Limita la larghezza del testo */
-  line-height: 1.5; /* Migliora la leggibilità */
+  line-height: 1.5;
+  word-wrap: break-word;
 }
 
 .cookie-button {
-  margin: 10px;
+  margin: 5px;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
@@ -833,8 +843,15 @@ html, body {
 .cookie-banner a:hover {
   color: #3d2fff; /* Colore del link quando ci si passa sopra (hover effect) */
 }
+
 @media (max-width: 768px) {
   .cookie-banner p {
-    font-size: 13px; /* Riduce ulteriormente il testo per i telefoni */
+    font-size: 13px;
+    max-width: 90%; /* Adatta la larghezza per dispositivi mobili */
+  }
+
+  .cookie-button {
+    width: 100%; /* Pulsanti più larghi su mobile */
+    max-width: 300px;
   }
 }
