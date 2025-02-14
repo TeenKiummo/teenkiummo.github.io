@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadGoogleAnalytics() {
     const gaScript = document.createElement("script");
-    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X";
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-EFD8KL9K2G";
     gaScript.async = true;
     document.head.appendChild(gaScript);
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXXXX-X', { 'anonymize_ip': true });
+      gtag('config', 'G-EFD8KL9K2G', { 'anonymize_ip': true });
     };
   }
 });
