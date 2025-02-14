@@ -9,8 +9,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-EFD8KL9K2G');
+  gtag('config', 'G-EFD8KL9K2G', { 'anonymize_ip': true }); // Anonimizzazione IP);
 </script>
 
   <meta charset="UTF-8" />
@@ -148,7 +147,12 @@
   <div class="footer-content">
       <p>&copy; 2025 TactiVaults. Tutti i diritti riservati.</p>
       <p>Creato da <a href="https://www.linkedin.com/in/raoul-renda/" target="_blank">Raoul Renda</a></p>
-      <p class="privacy-policy"><em>Questo sito non raccoglie dati personali né utilizza cookie di profilazione.</em></p>
+      <p class="privacy-policy">
+        <em>
+          Questo sito utilizza Google Analytics per analisi statistiche anonime. Per ulteriori dettagli, consulta la nostra 
+          <a href="Html/gdpr.html">Privacy Policy</a>.
+        </em>
+      </p>
   </div>
 </footer>
 
