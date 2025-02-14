@@ -539,13 +539,13 @@ background-color: #fff;
     margin: 0;
     animation: blink 1.5s infinite alternate;
   }
-  .banner a{
+  .cookie-banner a{
     font-style: italic; /* Imposta il testo in corsivo */
     color: #5d9eff; /* Imposta un colore scuro per il link (modifica il colore come preferisci) */
     text-decoration: none; /* Rimuove la sottolineatura predefinita */
   }
 
-  .banner a:hover {
+  .cookie-banner a:hover {
     color: #3d2fff; /* Colore del link quando ci si passa sopra (hover effect) */
   }
   
