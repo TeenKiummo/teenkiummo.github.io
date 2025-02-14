@@ -375,6 +375,11 @@ h1 {
     margin: 0 auto;
     z-index: 1; /* Assicura che il contenuto rimanga sopra l'immagine */
   }
+  .privacy-policy-page a{
+    font-style: italic; /* Imposta il testo in corsivo */
+    color: #5d9eff; /* Imposta un colore scuro per il link (modifica il colore come preferisci) */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+  }
   #privacy {
     position: relative;
     padding: 60px 20px;
@@ -778,4 +783,38 @@ html, body {
   .product-description p {
     font-size: 16px;
   }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999; /* Molto alto per evitare sovrapposizioni */
+  display: none;
+}
+
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cookie-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cookie-button:hover {
+  background-color: #45a049;
 }
